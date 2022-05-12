@@ -2,7 +2,7 @@ import java.util.*;
 
 public class rockPaperScissors { //public class of same name
     public static void main(String[] args) { //main() method}
-        Scanner scanner = new Scanner(System.in); //declare scanner object for user input
+        var scanner = new Scanner(System.in); //declare scanner object for user input
     //Decoreate the program
         System.out.println("|||||||||||||||||||||||||||||||||||||"); //Print boundary
         System.out.println("|-Let's play Rock, Paper, Scissors!-|"); //Welcome player message
@@ -29,10 +29,9 @@ public class rockPaperScissors { //public class of same name
     }
     //Print the versus and the winner
     System.out.println("|||||||||||||||||||||||||||||||||||||"); //Print boundary
-    System.out.println("||" + playerChoice + " - VERSUS - " + computerMove + "||");
+    System.out.println("|||" + playerChoice + " - VERSUS - " + computerMove + "|||");
 
-    //player wins method
-
+    //print the winner options
     if (computerMove.equals(playerChoice) ){
         System.out.println("Tied!");
     }
@@ -43,8 +42,8 @@ public class rockPaperScissors { //public class of same name
         System.out.println("You lose!");
     }
 
-    // else if (computerMove )
     }
+    //player wins method to check all the possible outcomes for a play to win
     static boolean playerWins(String playerChoice, String computerMove){
         if (playerChoice.equals("Rock")){
             if (computerMove.equals("Scissors")){
