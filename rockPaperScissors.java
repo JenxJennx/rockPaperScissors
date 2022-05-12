@@ -7,7 +7,7 @@ public class rockPaperScissors { //public class of same name
         System.out.println("|||||||||||||||||||||||||||||||||||||"); //Print boundary
         System.out.println("|-Let's play Rock, Paper, Scissors!-|"); //Welcome player message
     //Ask for user input
-        System.out.println("|||||||||||||||||||||||||||||||||||||"); //Print boundary
+      //  System.out.println("|||||||||||||||||||||||||||||||||||||"); //Print boundary
         System.out.println(" ||Rock, Paper, Scissors, Shoot!||"); //Make call to enter choice
         String playerChoice = scanner.nextLine(); //Store the okayers move}
     //Get computer move by random number selection
@@ -31,6 +31,38 @@ public class rockPaperScissors { //public class of same name
     System.out.println("|||||||||||||||||||||||||||||||||||||"); //Print boundary
     System.out.println("||" + playerChoice + " - VERSUS - " + computerMove + "||");
 
+    //player wins method
+
+    if (computerMove.equals(playerChoice) ){
+        System.out.println("Tied!");
     }
+    else if (playerWins(playerChoice, computerMove)){
+        System.out.println("Nice, you win!");
+    }
+    else {
+        System.out.println("You lose!");
+    }
+
+    // else if (computerMove )
+    }
+    static boolean playerWins(String playerChoice, String computerMove){
+        if (playerChoice.equals("Rock")){
+            if (computerMove.equals("Scissors")){
+                return true;
+            }
+        }
+        else if (playerChoice.equals("Paper")){
+            if (computerMove.equals("Rock")){
+                return true;
+            }
+         }
+        else if (playerChoice. equals("Scissors")){
+            if (computerMove == "Paper"){
+                return true;
+            }
+        }
+        return false;
+    }
+
     
 }
